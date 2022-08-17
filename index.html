@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:200,300,regular,500,600,700,800,200italic,300italic,italic,500italic,600italic,700italic,800italic"
+        rel="stylesheet" />
+    <title>Muhammad Farhan</title>
+    <style>
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background:
+                url(https://cdns.klimg.com/merdeka.com/i/w/news/2018/08/16/1003230/paging/540x270/soekarno-sakit-malaria-saat-membacakan-naskah-proklamasi-rev1.jpg) no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+
+        header>h1 {
+            font-style: italic;
+        }
+
+        header>h1>span {
+            background-color: red;
+            padding: 4px 2rem;
+            border-top-left-radius: 3rem;
+            border-bottom-right-radius: 3rem;
+        }
+
+        header:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 60vh;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+        }
+
+        .title {
+            font-family: 'Times New Roman', Times, serif;
+            position: absolute;
+            top: 30%;
+            left: 40%;
+            transform: translate(-50%, -50%);
+            font-size: 120px;
+            color: white;
+        }
+
+        .history {
+            background-color: rgb(0, 0, 0);
+            width: 100%;
+            display: flex;
+            padding-block: 4rem;
+        }
+
+        .img-proklamasi {
+            margin-left: 2rem;
+            margin-right: 20px;
+            border: solid 26px #fff;
+            background: #fff;
+            box-shadow: 0 0 15px 0px #555;
+            transition: all 1s ease;
+            -o-transition: all 1s ease;
+            -moz-transition: all 1s ease;
+            -webkit-transition: all 1s ease;
+            top: 50px;
+        }
+
+        .img-proklamasi>p {
+            text-align: center;
+            font-weight: 600;
+            font-family: "Plus Jakarta Sans";
+            font-style: italic;
+        }
+
+        .sejarah-singkat {
+            background-color: white;
+            height: max-content;
+            padding-inline: 2rem;
+            padding-block: 3rem;
+            font-family: "Plus Jakarta Sans";
+        }
+
+        .sejarah-singkat>p {
+            letter-spacing: 2px;
+        }
+
+        .pahlawan {
+            background-color: rgb(0, 0, 0);
+            height: 100%;
+        }
+
+        .pahlawan h1 {
+            margin-top: -1px;
+            color: white;
+            text-align: center;
+            font-family: "Plus Jakarta Sans";
+        }
+
+        ul {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul a {
+            text-decoration: none;
+            color: black;
+        }
+
+        li {
+            text-align: center;
+            display: inline-block;
+            list-style: none;
+            position: relative;
+            border: solid 13px #fff;
+            background: #fff;
+            box-shadow: 0 0 15px 0px #555;
+            transition: all 1s ease;
+            -o-transition: all 1s ease;
+            -moz-transition: all 1s ease;
+            -webkit-transition: all 1s ease;
+            top: 50px;
+        }
+
+        li:hover {
+            top: 0px;
+            opacity: 0.8;
+        }
+
+        li:nth-child(1) {
+            transform: rotate(10deg);
+        }
+
+        li:nth-child(2) {
+            transform: rotate(0deg);
+        }
+
+        li:nth-child(3) {
+            transform: rotate(-10deg);
+        }
+
+        li:nth-child(4) {
+            transform: rotate(10deg);
+        }
+
+        li:nth-child(5) {
+            transform: rotate(0deg);
+        }
+
+        li:nth-child(6) {
+            transform: rotate(10deg);
+        }
+
+        li:nth-child(7) {
+            transform: rotate(10deg);
+        }
+
+        li:nth-child(8) {
+            transform: rotate(-6deg);
+        }
+
+        li>p {
+            margin: 15px 0 0 0;
+            font-weight: 600;
+            font-family: "Plus Jakarta Sans";
+        }
+
+        .biografi {
+            padding-top: 10rem;
+            padding-inline: 10rem;
+            background-color: rgb(0, 0, 0);
+            font-family: "Plus Jakarta Sans";
+        }
+
+        .list-pahlawan {
+            display: flex;
+            padding-block: 2rem;
+        }
+
+        .list-pahlawan>.img>img {
+            border: solid 20px #fff;
+            background: #fff;
+            box-shadow: 0 0 15px 0px #555;
+            transition: all 1s ease;
+            -o-transition: all 1s ease;
+            -moz-transition: all 1s ease;
+            -webkit-transition: all 1s ease;
+            top: 50px;
+        }
+
+        .list-pahlawan>p {
+            color: white;
+            margin-inline: 2rem;
+            letter-spacing: 1px;
+        }
+
+        footer {
+            background-color: white;
+            text-align: center;
+            font-weight: 600;
+            padding-block: 4px;
+            font-family: "Plus Jakarta Sans";
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="title"><span>PAHLAWAN</span> PROKLAMASI</h1>
+    </header>
+    <section class="history">
+        <div class="img-proklamasi">
+            <img src="https://assets.pikiran-rakyat.com/crop/0x0:0x0/x/photo/2022/07/25/1447314548.jpg" alt="">
+            <p>"Pembacaan Proklamasi tahun 1945 oleh Soekarno"</p>
+        </div>
+        <div class="sejarah-singkat">
+            <h1>Sejarah Singkat Proklamasi</h1>
+            <p>
+                Sejarah Proklamasi Kemerdekaan Indonesia – Pengumuman kemerdekaan pada suatu negara merupakan impian
+                yang dimiliki oleh setiap negara terutama bagi negara dan bangsa yang sudah lama dijajah, seperti
+                Indonesia.
+
+                Waktu Indonesia mengumumkan kemerdekaannya pada tanggal 17 Agustus 1945, maka seluruh masyarakat
+                Indonesia sangat senang karena mereka sudah terlalu lama dijajah oleh beberapa negara seperti Belanda
+                dan Jepang.
+
+                Bukan hanya senang, tetapi bangsa Indonesia juga mendapatkan semangat kemerdekaan yang tinggi yang
+                dilandasi dengan rasa keberanian untuk mengambil keputusan dan membela kebenaran.
+
+                Dengan pengumuman Proklamasi Kemerdekaan Indonesia pada dunia maka Indonesia telah dinyatakan sebagai
+                negara baru yang memiliki kedudukan yang sama dengan negara-negara lain yang sudah melakukan Proklamasi
+                Kemerdekaan. Bagi negara yang belum merdeka maka pengumuman Proklamasi Kemerdekaan pada dunia adalah
+                suatu impian yang sangat didamba-dambakan.
+
+                Setiap negara punya sejarah sendiri untuk melakukan Proklamasi Kemerdekaan. Sama halnya negara dan
+                bangsa Indonesia yang di mana sejarah Proklamasi Kemerdekaannya membutuhkan beberapa hal, seperti
+                menggunakan rumah Laksamana Muda Maeda, pemilihan naskah Proklamasi, dan lain-lain.
+            </p>
+        </div>
+    </section>
+    <div class="pahlawan">
+        <h1>Tokoh Proklamasi</h1>
+        <ul>
+            <a href="#soekarno">
+                <li><img src="https://kompaspedia.kompas.id/wp-content/uploads/2020/02/Soekarno_sq-1-e1585486258865.jpg"
+                        width="200">
+                    <p>Soekarno</p>
+                </li>
+            </a>
+            <a href="#hatta">
+
+                <li><img src="https://3.bp.blogspot.com/-iZVU1DesSKo/WuctY7Z79zI/AAAAAAAAApI/d-0O_MMc8vIgxorgHd8OV6CFzFQTpUKzgCLcBGAs/s320/bung%2Bhatta.png"
+                        width="200">
+                    <p>Mohammad Hatta</p>
+                </li>
+            </a>
+            <a href="#ahmad">
+
+                <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8tvbfBPnapEfKia20APEK8sLxMrdjZ2_5uuH_Oa7_6mm24SiZLyiiJfSaOkVAhFNW96g&usqp=CAU"
+                        width="200">
+                    <p>Ahmad Subarjo</p>
+                </li>
+            </a>
+            <a href="#fatmawati">
+
+                <li><img src="https://d220hvstrn183r.cloudfront.net/attachment/48622298069435406364.large" width="200">
+                    <p>Fatmawati</p>
+                </li>
+            </a>
+            <a href="#soekarni">
+
+                <li><img src="https://www.bengkuluinteraktif.com/sites/default/files/articles/ibu%20fatmawati010.jpg"
+                        width="200">
+                    <p>Soekarni</p>
+                </li>
+            </a>
+            <a href="#sayuti">
+
+                <li><img src="https://i.postimg.cc/Wp5yhdvn/biografi-dan-profil-soekarni-tokoh-kemerdekaan-diplomat-dan-poli.jpg"
+                        width="200">
+                    <p>Sayuti Melik</p>
+                </li>
+            </a>
+            <a href="#latif">
+
+                <li><img src="https://sebelasmipa4.files.wordpress.com/2016/04/latif-hendraningrat.png?w=234&h=310"
+                        width="200">
+                    <p>Latif Hendriningrat</p>
+                </li>
+            </a>
+            <a href="#maeda">
+
+                <li><img src="https://qph.cf2.quoracdn.net/main-qimg-35d098be11ad68c5a49436587bcd8987-lq" width="200">
+                    <p>Laksamana Maeda</p>
+                </li>
+            </a>
+        </ul>
+    </div>
+    <div class="biografi">
+        <div class="list-pahlawan" id="soekarno">
+            <div class="img">
+                <img src="https://kompaspedia.kompas.id/wp-content/uploads/2020/02/Soekarno_sq-1-e1585486258865.jpg"
+                    width="300" alt="">
+            </div>
+            <p>
+                Ir. Soekarno adalah presiden pertama Republik Indonesia, sekaligus tokoh proklamator negara ini.
+                Soekarno akrab dipanggil dengan julukan Bung Karno. Bung Karno juga dikenal sebagai Putra Sang Fajar
+                karena lahir saat fajar menyingsing. Bung Karno lahir di Surabaya, 6 Juni 1901 dan meninggal di Jakarta,
+                21 Juni 1970. Dikutip dari laman RRI, Soekarno awalnya diberi nama Koesno Sosrodihardjo. Karena sering
+                sakit, namanya diganti menjadi Soekarno. Soekarno merupakan putra dari Raden Soekemi Sosrodihardjo dan
+                Ida Ayu Nyoman Rai. Ibunda
+                Bung Karno merupakan bangsawan Bali. Kedua orang tua Soekarno bertemu saat sang ayah menjadi guru di
+                Bali. Soekarni hanya sebentar tinggal dengan kedua orang tuanya di Blitar. Kemudian beliau pindah ke
+                Surabaya untuk menamatkan SD. Selama di Surabaya, Bung Karno tinggal di kediaman Haji Oemar Said
+                Tjokroaminoto. Setelah tamat, Bung karno melanjutkan pendidikan di HBS (Hoogere Burger School). Lulus
+                tahun 1920, Soekarno melanjutkan pendidikan di THS (Technische Hoogeschool) di Bandung. THS ini
+                merupakan cikal bakal Institut Teknologi Bandung. Soekarno lulus pada 25 Mei 1926 dan mendapat gelar
+                "Ir".
+                Soekarno berperan sebagai pembaca teks proklamasi. Ia lahir pada 6 Juni 1901 di Blitar, Jawa Timur. Ia
+                diketahui aktif berjuang sebelum kemerdekaan dengan menjadi anggota Pusat Tenaga Rakyat (Putera), hingga
+                ketua PPKI.
+            </p>
+        </div>
+        <div class="list-pahlawan" id="hatta">
+            <p>
+                Biografi Moh. Hatta diawali dengan latar belakang keluarga dan pendidikannya. Hatta lahir dari keluarga
+                ulama Minangkabau, Sumatra Barat. Hatta menempuh pendidikan dasar di Sekolah Melayu, Bukittinggi.
+                Kemudian pada tahun 1913-1916 melanjutkan studinya ke Europeesche Lagere School (ELS) di Padang. Saat
+                usia 13 tahun, sebenarnya beliau telah lulus ujian masuk ke HBS (setingkat SMA) di Batavia (kini
+                Jakarta). Namun, ibunya menginginkan Hatta agar tetap di Padang lantaran usianya yang masih sangat muda.
+                Akhirnya
+                Hatta melanjutkan studi ke MULO di Padang. Lalu, pada 1919 Hatta pergi ke Batavia untuk studi di Sekolah
+                Tinggi Dagang Prins Hendrik School, Batavia. Di sini, Hatta mulai aktif menulis. Karangannya dimuat
+                dalam majalah Jong Sumatera. Setelah menyelesaikan studinya dengan hasil sangat memuaskan, pada 1921
+                Hatta pergi ke Rotterdam, Belanda untuk belajar ilmu perdagangan/bisnis di Nederland Handelshogeschool
+                (bahasa inggris: Rotterdam School of Commerce, kini menjadi Erasmus Universiteit). Di Belanda, Hatta
+                tinggal selama 11 tahun. Pada 27 November 1956, Bung Hatta memperoleh gelar kehormatan akademis yaitu
+                Doctor Honoris Causa dalam Ilmu Hukum dari Universitas Gadjah Mada di Yoyakarta. Pidato pengukuhannya
+                berjudul "Lampau dan Datang".
+            </p>
+            <div class="img">
+                <img src="https://3.bp.blogspot.com/-iZVU1DesSKo/WuctY7Z79zI/AAAAAAAAApI/d-0O_MMc8vIgxorgHd8OV6CFzFQTpUKzgCLcBGAs/s320/bung%2Bhatta.png"
+                    width="300" alt="">
+            </div>
+        </div>
+        <div class="list-pahlawan" id="ahmad">
+            <div class="img">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8tvbfBPnapEfKia20APEK8sLxMrdjZ2_5uuH_Oa7_6mm24SiZLyiiJfSaOkVAhFNW96g&usqp=CAU"
+                    width="300" alt="">
+            </div>
+            <p>
+                Ahmad Subardjo Djoyoadisuryo lahir di Teluk Jambe, Karawang, Jawa Barat, tanggal 23 Maret 1896. Ayahnya
+                bernama Teuku Muhammad Yusuf, masih keturunan bangsawan Aceh dari Pidie. Ibu Ahmad Subardjo
+                Djoyoadisuryo bernama Wardinah. Ia keturunan Jawa-Bugis dan anak dari Camat di Telukagung, Cirebon.
+                Semasa remaja, Subarjo sekolah di Hogere Burger School, Jakarta (Setara dengan Sekolah Menengah Atas)
+                pada tahun 1917. Ia kemudian melanjutkan pendidikannya di Universitas Leiden, Belanda dan memperoleh
+                ijazah Meester in de Rechten (saat ini setara dengan Sarjana Hukum) di bidang undang-undang pada tahun
+                1933.
+
+                Dalam bidang pendidikan, Subardjo merupakan profesor dalam bidang Sejarah Perlembagaan dan Diplomasi
+                Republik Indonesia di Fakultas Kesusasteraan, Universitas Indonesia. Ketika menjadi mahasiswa, Subardjo
+                aktif dalam memperjuangkan kemerdekaan Indonesia melalui organisasi kepemudaan seperti Jong Jawa dan
+                Persatuan Mahasiswa Indonesia di Belanda.
+
+                Tugas Ahmad Subarjo yang menjemput Soekarno dan Hatta di Rengasdengklok. Ia juga memutuskan bahwa
+                proklamasi kemerdekaan harus dilaksanakan di Jakarta.
+            </p>
+        </div>
+        <div class="list-pahlawan" id="sayuti">
+            <p>
+                Sayuti Melik lahir pada tanggal 22 November 1908 di Sleman, Yogyakarta, pada masa pemerintahan Hindia
+                Belanda. Masa kecilnya dihabiskan di Yogyakarta dan mengenyam pendidikan di sekolah dasar. Ayahnya
+                merupakan pejabat desa yang terkenal dengan menentang pemerintah Belanda. Pada masa kuliah, ia
+                melanjutkan pendidikannya di Solo dan belajar dengan seorang cendekiawan sayap kiri, yakni Haji Misbach.
+                Masa-masa ini merupakan masa saat beliau menumbuhkan semangat perjuangannya untuk melawan penjajah,
+                berkat dari buku-buku dan tulisan yang menyerukan perlawanan terhadap praktik kolonialisme dan
+                kapitalisme, serta bentuk penindasan lainnya.
+                Sayuti Melik menjadi salah satu tokoh proklamasi dan berperan sebagai pengetik naskah. Sebelumnya,
+                naskah proklamasi ditulis tangan dengan beberapa perubahan, setelah disetujui diserahkan kepada Sayuti.
+            </p>
+            <div class="img">
+                <img src="https://d220hvstrn183r.cloudfront.net/attachment/48622298069435406364.large" width="300"
+                    alt="">
+            </div>
+        </div>
+        <div class="list-pahlawan" id="fatmawati">
+            <div class="img">
+                <img src="https://www.bengkuluinteraktif.com/sites/default/files/articles/ibu%20fatmawati010.jpg"
+                    width="300" alt="">
+            </div>
+            <p>
+                Fatmawati, wanita asli pribumi ini lahir di Bengkulu pada tanggal 5 Februari 1923 dengan nama asli
+                Fatimah. Nama Fatimah
+                merupakan pemberian dari kedua orang tuanya. Fatmawati merupakan keturunan dari pasangan Hassan Din dan
+                Siti Chadijah
+                yang mana kedua orangtuanya adalah keturunan Puti Indrapura atau biasa disebut seorang keluarga raja
+                dari kesultanan
+                Indrapura, Pesisir Selatan, Sumatra Barat. Ayah Fatmawati juga terkenal sebagai salah satu tokoh
+                Muhammadiyah di
+                Bengkulu. Fatmawati dididik dan dibesarkan kedua orangtuanya di Bengkulu.
+
+                Ketika beranjak dewasa, Fatmawati menikah dengan Presiden Indonesia Pertama Soekarno pada tanggal 01
+                Juni 1943, saat itu
+                Fatmawati berusia 20 tahun. Dari pernikahan tersebut, secara otomatis Fatmawati menjadi Ibu Negara
+                Indonesia pertama
+                dari tahun 1945 hingga tahun 1967.
+
+                Fatmawati merupakan istri yang ketiga dari Presiden Pertama Indonesia, Soekarno. Pasangan Pemimpin
+                Negara Indonesia
+                tersebut dikaruniai lima orang putra dan putri, di antaranya adalah Guntur Soekarnoputra, Megawati
+                Soekarnoputri,
+                Rachmawati Soekarnoputri, Sukmawati Soekarnoputri, dan yang terakhir Guruh Soekarnoputra.
+
+                Istri proklamator ini terlibat sebagai tokoh proklamasi dalam kemerdekaan Indonesia. Fatmawati diketahui
+                yang menjahitkan bendera pusaka Merah-Putih untuk dikibarkan saat upacara 17 Agustus 1945.
+            </p>
+        </div>
+        <div class="list-pahlawan" id="soekarni">
+            <p>
+                Sukarni Kartodiwirjo lahir pada tanggal 14 Juli 1916 di Desa Sumberdiran, Garum, Blitar Jawa Tmur. Ayah
+                Sukarni bernama
+                Dimoen Kartodiwirjo, yang merupakan keturunan Eyang Onggo, yaitu juru masak Pangeran Diponegoro.
+                Sementara ibu Sukarni
+                bernama Supiah, seorang gadis asal Kediri. Keseharian orang tua Sukarni berdagang di Pasar Garum,
+                Blitar, dan termasuk
+                keluarga berada di zaman itu. Pendidikan Sukarni dimulai saat dia bersekolah di Taman Siswa di Blitar
+                yang lebih dikenal
+                dengan nama Mardisiswo. Diketahui, Taman Siswa merupakan sekolah rakyat yang didirikan oleh Suwardi
+                Suryaningrat atau Ki
+                Hajar Dewantara. Jiwa nasionalisme Sukarni sudah ditanamkan sejak kecil baik di lingkungan keluarga
+                maupun di sekolah.
+                Saat di sekolah, Sukarni dididik oleh seorang guru bernama Mohammad Anwar. Gurunya ini sangat
+                nasionalisme dan
+                antipenjajahan Belanda.
+                ia juga yang mengusulkan agar naskah proklamasi kemerdekaan hanya ditandatangani oleh Soekarno dan
+                Hatta, sebagai perwakilan bangsa Indonesia.
+            </p>
+            <div class="img">
+                <img src="https://i.postimg.cc/Wp5yhdvn/biografi-dan-profil-soekarni-tokoh-kemerdekaan-diplomat-dan-poli.jpg"
+                    width="300" alt="">
+            </div>
+        </div>
+        <div class="list-pahlawan" id="latif">
+            <div class="img">
+                <img src="https://sebelasmipa4.files.wordpress.com/2016/04/latif-hendraningrat.png?w=234&h=310"
+                    width="300" alt="">
+            </div>
+            <p>
+                Karier Militer
+                Pranala luar
+                Referensi
+                Ikuti Wikipedia bahasa Indonesia di F icon.svg Facebook, Twitter-logo.svg Twitter, Instagram simple
+                icon.svg Instagram,
+                dan Telegram logo.svg Telegram
+                Tutup
+
+                Latief Hendraningrat
+                Halaman
+                Pembicaraan
+                Baca
+                Sunting
+                Sunting sumber
+                Lihat riwayat
+                Dari Wikipedia bahasa Indonesia, ensiklopedia bebas
+                Latief Hendraningrat
+                Berkas:Kol Inf Latief Hendraningrat.jpg
+                Latief Hendraningrat saat menjadi Komandan SSKAD.
+                Komandan SSKAD
+                Masa jabatan
+                16 April 1958 – 27 Juli 1959
+                Pendahulu A.Y. Mokoginta
+                Pengganti Suadi Suromihardjo
+                Informasi pribadi
+                Lahir 15 Februari 1911
+                Hindia Belanda Batavia, Hindia Belanda
+                Meninggal 14 Maret 1983 (umur 72)
+                Indonesia Jakarta, Indonesia
+                Hubungan 1. Letjen TNI (Purn.) Rukmito Hendraningrat (Kakak Tiri)
+                2. Raden Mas Djojo Dirono (Bupati Lamongan Ke-21)
+                Alma mater PETA
+                Karier militer
+                Pihak
+                Kekaisaran Jepang (1943—1945)
+                Indonesia (1945—1967)
+                Dinas/cabang Insignia of the Indonesian Army.svg TNI Angkatan Darat
+                Masa dinas 1943—1967
+                Pangkat Pdu brigjendtni staf.png Brigadir Jenderal TNI
+                Satuan Infanteri
+                Brigadir Jenderal TNI (Purn.) Raden Mas Abdul Latief Hendraningrat (15 Februari 1911 – 14 Maret 1983)
+                merupakan seorang
+                prajurit PETA berpangkat Sudanco (komandan Kompi) dan juga pengerek bendera Sang Saka Merah Putih
+                didampingi oleh
+                Soehoed Sastro Koesoemo, seorang pemuda dari Barisan Pelopor, pada tanggal 17 Agustus 1945 di Jalan
+                Pegangsaan Timur 56,
+                Jakarta Pusat.
+
+                Saat menjadi petugas upacara bendera pertama sesudah proklamasi kemerdekaan, Latief Hendraningrat
+                memakai seragam
+                tentara Jepang karena Latief merupakan anggota pasukan Pembela Tanah Air (PETA) bentukan Jepang.[1]
+                Sebelum masuk PETA,
+                Latief Hendraningrat sudah aktif di Pusat Latihan Pemuda (Seinen Kunrenshoo) yang juga bentukan Jepang.
+
+                Ia ikut berperan dalam peristiwa proklamasi kemerdekaan Indonesia dengan menaikkan bendera pusaka saat
+                upacara 17 Agustus 1945.
+
+            </p>
+        </div>
+        <div class="list-pahlawan" id="maeda">
+            <p>
+                Laksamana Maeda adalah seorang perwira tinggi Angkatan Laut Kekaisaran Jepang di Hindia Belanda pada
+                masa Perang Pasifik. Perwira tinggi bernama lengkap Laksamana Muda Tadashi Maeda itu lahir di Kagoshima,
+                Jepang, pada 3 Maret 1898. Laksamana Maeda berasal dari keluarga keturunan kelas samurai dan ayahnya
+                adalah seorang kepala sekolah di Kajiki. Pada usia 18 tahun, Laksamana Maeda masuk ke Akademi Angkatan
+                Laut Jepang dan mengambil spesialisasi navigasi. Laksamana Maeda pun telah mendapatkan pangkat letnan
+                satu di Angkatan Laut Kekaisaran Jepang pada 1930. Ia mulai menjadi atase angkatan laut untuk Belanda
+                pada 1940. Setelah itu, pada Oktober 1940, Maeda ditugaskan ke Indonesia untuk menegosiasikan perjanjian
+                dagang dengan pemerintah kolonial, khususnya terkait pembelian minyak untuk Jepang. Selain itu, ia juga
+                ditugaskan membangun jaringan mata-mata di Indonesia. Belum genap satu tahun berada di Indonesia, Maeda
+                kembali ke Jepang pada pertengahan 1941, untuk bekerja sebagai seksi urusan Eropa. Laksamana Maeda
+                kembali ke Indonesia setelah Jepang menyerbu Hindia Belanda pada 1942. Saat itu, Maeda ditugaskan
+                mengatur operasi-operasi Angkatan Laut Jepang di wilayah Papua.
+
+                Laksamana Maeda mengizinkan para pejuang menggunakan rumahnya sebagai tempat perumusan naskah
+                proklamasi.
+                <div class="img">
+                    <img src="https://qph.cf2.quoracdn.net/main-qimg-35d098be11ad68c5a49436587bcd8987-lq" width="300"
+                        alt="">
+                </div>
+        </div>
+    </div>
+    <footer>Created by Farhan</footer>
+</body>
+
+</html>
